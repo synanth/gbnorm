@@ -186,7 +186,7 @@ get.references.apcluster <- function(m,
                                      debug = FALSE,
                                      verbose.output = FALSE, ...) {
     ## Transpose the input count matrix
-    m = t(m)
+    mt = t(m)
     ## Reduce the size of graph
     isUniversal = sapply(1:ncol(mt), FUN = function(i) { return(all(mt[,i] > min.count)) })
     medium.threshold = sapply(1:nrow(mt), function(i) {
